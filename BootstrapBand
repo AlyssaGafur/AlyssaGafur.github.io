@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Band Geeks</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 24px/1.8 'Courgette', cursive;
+      color: #31B3C2;
+  }
+  h3, h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;      
+      font-size: 45px;
+      color: #F08080;
+  }
+  .container {
+      background: url("http://backgroundcheckall.com/wp-content/uploads/2017/12/gif-transparent-background-4.gif");
+      padding: 80px 120px;  
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.8;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+
+      width: 99%; /* Set width to 100% */
+      margin: auto;
+      opacity:0.9;
+  }
+  .carousel-caption h3 {
+      color: #20DCC2 !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+      background: #73981E;
+      color:  #10E7ED  
+;
+  }
+  .bg-1 h3 {color: yellow;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+      color: #9DD126;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      opacity: 0.7;
+      background: url("https://upload.wikimedia.org/wikipedia/en/5/53/Band_Geeks.jpg");
+      color:#ABEA1F ;
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: #756;
+      color: yellow;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      opacity: 0.7;
+      background: url("https://upload.wikimedia.org/wikipedia/en/5/53/Band_Geeks.jpg");
+      color: # #EDC610;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 20px 30px;
+  }
+  .nav-tabs li a {
+      color: #947;
+  }
+  #googleMap {
+      width: 100%;
+      height: 400px;
+
+  }  
+  .navbar {
+      font-family: 'Monoton', cursive; 
+      margin-bottom: 0;
+      background-color: #468;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #756 !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #756 !important;
+  }
+  .dropdown-menu li a {
+      color: #756 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: red !important;
+  }
+  footer {
+      background-color: #2d2d30;
+      color: #f5f5f5;
+      padding: 32px;
+  }
+  footer a {
+      color: #f5f5f5;
+  }
+  footer a:hover {
+      color: #777;
+      text-decoration: none;
+  }  
+  .form-control {
+      border-radius: 0;
+  }
+  textarea {
+      resize: none;
+  }
+  .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+  }
+
+  .logo {
+      color: #f4511e;
+      font-size: 200px;
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Started from the Bikini Bottom, now we're here</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#band">SEA BAND MEMBERS</a></li>
+        <li><a href="#tour">OCEAN TOURS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.thesouledstore.com/artists/spongebob-squarepants" target="_blank">Merchant-Dise</a></li>
+            <li><a href="http://www.nick.com/spongebob-squarepants/videos/spongebob-squarepants-half-time-clip/" target="_blank">Behind the Seas</a></li>
+            <li><a href="http://www.nick.com/spongebob-squarepants/" target="_blank">Media</a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="https://pm1.narvii.com/6452/f80272cfd7c697c9ec09181a10b327a610b4c34b_hq.jpg" alt="Alantic" width="1000" height="500">
+        <div class="carousel-caption">
+          <h3>Atlantic Ocean</h3>
+          <p>Atlantic SquarePantis - back in action!</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="https://d1xfgk3mh635yx.cloudfront.net/sites/default/files/styles/inline/public/image/featured/52925-stop-motion-spongebob-special-means-christmas-comes-early-year.jpg?itok=B0LljnPW" alt="Arctic" width="1000" height="500">
+        <div class="carousel-caption">
+          <h3>Arctic Ocean</h3>
+          <p>Is it cold? Or is it us?</p>
+        </div>      
+      </div>
+    
+      <div class="item">
+        <img src="http://78.media.tumblr.com/31417381f11a8fe3448ae485b0fb5bee/tumblr_inline_n0dzwyC5UA1su4b96.png" alt="Pacific" width="1000" height="500">
+        <div class="carousel-caption">
+          <h3>Pacific Ocean</h3>
+          <p>It was great to be home in the Bikini Bottom where we started!</p>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Container (The Band Section) -->
+<div id="band" class="container text-center">
+  <h3>In The Beginning</h3>
+  <p><em>We love Squidward and music!</em></p>
+  <p>Squidward recieves the oppurtunity to prove his musical skills to Squlliam Fancyson at the Bubble Bowl in the Bikin Bottom. He attempts to acquire a band full of Bikini Bottom residents, however a lack of patience and unconsistent practice leads the band to fail miserably. Coming to Squidward's rescue, Spongebob gathers all members of the band and encourages them to work hard for the sake of Squidward who has helped everyone in their times of need. As Squidward was prepared for embarrassment at the Bubble Bowl, the band surprises him, leaving him shocked and amazed, and also once again, proving himself to Squlliam Fancyson.</p>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Squidward Tentacles</strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="https://vignette.wikia.nocookie.net/spongebob/images/f/f5/Squidward_band_geeks.jpg/revision/latest?cb=20120926111327" class="img-circle person" alt="Squidward" width="255" height="255">
+      </a>
+      <div id="demo" class="collapse">
+        <p>Conductor</p>
+        <p>Cannot play the clarinent</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Spongebob SquarePants</strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="https://i.ytimg.com/vi/IIjPP0x0ulE/hqdefault.jpg" class="img-circle person" alt="Spongebob" width="255" height="255">
+      </a>
+      <div id="demo2" class="collapse">
+        <p>Singer</p>
+        <p>Has the musical stylings of David Glen Eisley</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Patrick Star</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="http://s3.amazonaws.com/images.thereadingroom.com/img/posts/Adam_Spera/Band_Geeks-2resize.jpg" class="img-circle person" alt="Patrick" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+        <p>Drummer</p>
+        <p>Thought mayonaise was an instrutment</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Container (Services Section) -->
+<div class="container text-center">
+  <h2>OtHeR MeMbErs</h2>
+  <h4>Sea creatures that made us famous seawide</h4>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <img src= "https://img.buzzfeed.com/buzzfeed-static/static/enhanced/webdr02/2013/8/27/6/anigif_enhanced-buzz-18108-1377598528-6.gif?downsize=715:*&output-format=auto&output-quality=auto" class=" img-circle person" alt="Spongebob" width="255" height="255">
+      <h4>Plankton</h4>
+      <p>Passionate about stealing the secret Krabby Patty formula, but plays the hermonica</p>
+    </div>
+    <div class="col-sm-4">
+      <img src = "https://i.pinimg.com/originals/b8/b3/1a/b8b31a1c6f85fa3ba642e6d29f2e54b3.gif" class=" img-circle person" alt="Spongebob" width="255" height="255">
+      <h4>Mr.Krabs</h4>
+      <p>Plays a Piano Guitar...has a passion for $$</p>
+    </div>
+    <div class="col-sm-4">
+      <img src= "https://thumbs.gfycat.com/TiredSlimyJellyfish-size_restricted.gif" class=" img-circle person" alt="Spongebob" width="255">
+      <h4>Sandy Cheeks</h4>
+      <p>The Real Guitarist and only mammal Scientist in the Bikin Bottom</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <img src= "https://media.giphy.com/media/3ogwG1yNsQjzArvmBW/giphy.gif"class=" img-circle person" alt="Spongebob" width="255" height="255">
+      <h4>Pearl</h4>
+      <p>Whales the Saxaphone</p>
+    </div>
+    <div class="col-sm-4">
+      <img src= "https://media1.giphy.com/media/ffLw03fTFqg2A/giphy.gif"class=" img-circle person" alt="Spongebob" width="255" height="255">
+      <h4>Larry the Lobster</h4>
+      <p>Uses his muscles to play the trumpet</p>
+    </div>
+    <div class="col-sm-4">
+      <img src= "https://media.giphy.com/media/DUe51RoUCOgms/giphy.gif" class=" img-circle person" alt="Spongebob" width="255">
+      <h4 style="color:#F1948A;">Bass Tuna Fish</h4>
+      <p>They're just like background singers...except they're fish in charge of the bass section</p>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Container (TOUR Section) -->
+<div id="tour" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">OCEAN TOUR DATES</h3>
+    <p class="text-center">We'll make some sound waves.<br> Remember to buy your Shell Pass!</p>
+    <ul class="list-group">
+      <li class="list-group-item">April <span class="label label-danger">Sold Out!</span></li>
+      <li class="list-group-item">May <span class="label label-danger">Sold Out!</span></li> 
+      <li class="list-group-item">June <span class="badge">Few Left!</span></li> 
+    </ul>
+    
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="http://nick.mtvnimages.com/nick/promos-thumbs/videos/music-monday/music-monday-spongebob-goo-lagoon-nologo-16x9.jpg?quality=0.60" alt="The Beach" width="400" height="300">
+          <p><strong>Goo Lagoon</strong></p>
+          <p>June 27-August 27 2018 </p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Shell Pass</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="https://pbs.twimg.com/media/CcvK84fW8AAT2cg.jpg" alt="Tourist Atttraction" width="400" height="300">
+          <p><strong>Sea Needle</strong></p>
+          <p>August 30-October 28 2018</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Shell Pass</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="https://pbs.twimg.com/media/CcKNuaNUEAEKGSL.jpg" alt="Back Home" width="400" height="300">
+          <p><strong>Bikini Bottom</strong></p>
+          <p>November 1-December 31 2018</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Shell Pass</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class="glyphicon glyphicon-lock"></span>Shell Passes</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Shell Passes; $42 per fish, $200 per school</label>
+              <input type="number" class="form-control" id="psw" placeholder="How many?">
+            </div>
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+              <button type="submit" class="btn btn-block">Pay 
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container">
+  <h3 class="text-center">Contact</h3>
+  <p class="text-center"><em>We love our fans, there's nothing fishy about them!</em></p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <p>Fan? Share your experience with us.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>Bikini Bottom, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +00 1241503541</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: Alyssa.gafur@gmail.com</p>
+    </div>
+    <div class="col-md-8">
+<form action="http://www.SnapHost.com/captcha/send.aspx" id="ContactUsCaptchaWebForm" method="post" onsubmit="return ValidateForm(this);" target="_top">
+<input name="skip_WhereToSend" type="hidden" value="your@email.com" />
+<input name="skip_SnapHostID" type="hidden" value="UJGFWABM5GRW" />
+<input name="skip_WhereToReturn" type="hidden" value="http://www.YourWebsiteAddress.com/ThankYouPage.htm" />
+<input name="skip_Subject" type="hidden" value="Contact Us Form" />
+<input name="skip_ShowUsersIp" type="hidden" value="1" />
+<input name="skip_SendCopyToUser" type="hidden" value="1" />
+<script type="text/javascript">
+function ValidateForm(frm) {
+if (frm.Name.value == "") {alert('Name is required.');frm.Name.focus();return false;}
+if (frm.FromEmailAddress.value == "") {alert('Email address is required.');frm.FromEmailAddress.focus();return false;}
+if (frm.FromEmailAddress.value.indexOf("@") < 1 || frm.FromEmailAddress.value.indexOf(".") < 1) {alert('Please enter a valid email address.');frm.FromEmailAddress.focus();return false;}
+if (frm.Comments.value == "") {alert('Please enter comments or questions.');frm.Comments.focus();return false;}
+if (frm.skip_CaptchaCode.value == "") {alert('Enter web form code.');frm.skip_CaptchaCode.focus();return false;}
+return true; }
+function ReloadCaptchaImage(captchaImageId) {
+var obj = document.getElementById(captchaImageId);
+var src = '' + obj.src;
+obj.src = '';
+var date = new Date();
+var pos = src.indexOf('&rad=');
+if (pos >= 0) { src = src.substr(0, pos); }
+obj.src = src + '&rad=' + date.getTime();
+return false; }
+</script>
+<table border="0" cellpadding="5" cellspacing="0" width="600">
+<tr>
+<td><b>Name*:</b></td>
+<td><input name="Name" type="text" maxlength="60" style="width:350px;" /></td>
+</tr><tr>
+<td><b>Phone number:</b></td>
+<td><input name="PhoneNumber" type="text" maxlength="43" style="width:350px;" /></td>
+</tr><tr>
+<td><b>Email address*:</b></td>
+<td><input name="FromEmailAddress" type="text" maxlength="60" style="width:350px;" /></td>
+</tr><tr>
+<td><b>Comments and questions*:</b></td>
+<td><textarea name="Comments" rows="7" cols="40" style="width:350px;"></textarea></td>
+</tr><tr>
+<td colspan="2" align="center"> <br />
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2" style="padding-bottom:18px;">
+<!-- Please check our ProCaptcha service which is ad-free:
+http://www.SnapHost.com/captcha/ProCaptchaOverview.aspx -->
+<a href="http://www.snaphost.com/captcha/ProCaptchaOverview.aspx" alt="online form submission" title="online form submission">
+online form submission</a></td></tr>
+<tr valign="top"><td> <i>Enter web form code*:</i>
+<input name="skip_CaptchaCode" type="text" style="width:80px;" maxlength="6" />
+</td><td>
+<a href="http://www.snaphost.com/captcha/ReadyForms/ContactUsForm.aspx"><img id="CaptchaImage" alt="Contact Us form" title="HTML code for Contact Us form"
+style="margin-left:20px;"
+src="http://www.SnapHost.com/captcha/CaptchaImage.aspx?id=UJGFWABM5GRW&ImgType=2" /></a><br />
+<a href="#" onclick="return ReloadCaptchaImage('CaptchaImage');"><span style="font-size:12px;">reload image</span></a> </td></tr>
+</table> <br />
+* - required fields. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<input name="skip_Submit" type="submit" value="Submit" />
+</td></tr>
+</table><br />
+</form>
+
+    </div>
+  </div>
+  <br>
+  <h3 class="text-center">Shell-Tacular Members</h3>  
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Mr.Krabs</a></li>
+    <li><a data-toggle="tab" href="#menu1">Sandy Cheeks</a></li>
+    <li><a data-toggle="tab" href="#menu2">Plankton</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h2>Mr.Krabs, Keytarist</h2>
+      <p>MONEY is the ultimate source of happiness.</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h2>Sandy Cheeks, Guitarist</h2>
+      <p>Back in Texas, we call ice cream, "Frozen Cow Juice".</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h2>Plankton, Keyboardist</h2>
+      <p>Do instrutments of torture count?</p>
+    </div>
+  </div>
+</div>
+
+<!-- Add Google Maps -->
+<div id="googleMap"></div>
+<script>
+function myMap() {
+var myCenter = new google.maps.LatLng(-22.193657, 80.153945);
+var mapProp = {center:myCenter, zoom:6, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var marker = new google.maps.Marker({position:myCenter});
+marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?keyAIzaSyCk_qvSkhfijHnJgaFUXwhTEIG756_WCFo=&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>A Nickelodeon/Stephen Hllenburg Production <a href="http://www.nick.com/spongebob-squarepants/" data-toggle="tooltip" title="Visit Nickelodeon">www.nick.com</a></p> 
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+<script>
+  $("button").on("click", function() {
+    alert("Confirmed!");
+  });
+</script>
+
+</body>
+</html>
